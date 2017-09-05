@@ -261,9 +261,15 @@
     
     var svg = d3.select("#map")
         .append("svg")
-        .attr("height", height)
-        .attr("width", width)
+        .attr("viewBox", "0 0 " + width + " " + height )
+        .attr("preserveAspectRatio", "xMinYMin")
         .append("g")
+
+    // var svg = d3.select("#map")
+    //     .append("svg")
+    //     .attr("height", height)
+    //     .attr("width", width)
+    //     .append("g")
     
     //Read in world.topjson
     d3.queue()
